@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Provider} from 'react-redux';
+import store from './store';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import CalWrapper from './containers/CalWrapper';
@@ -6,9 +8,9 @@ import CalWrapper from './containers/CalWrapper';
 class App extends Component{
     render(){
         return(
-            <div>
+            <Provider store={store}>
                 <CalWrapper/>
-            </div>
+            </Provider>
         );
     }
 }
